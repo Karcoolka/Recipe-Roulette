@@ -1,6 +1,6 @@
 🎉 Welcome to RecipeRoulette! 🍳🥂
 
-Thanks for checking out our project, where cooking meets adventure! 🚀
+Thanks for checking out my project, where cooking meets adventure! 🚀
 
 ### How to Get Started 🛠️
 
@@ -19,7 +19,7 @@ We welcome contributions from fellow foodies and developers alike! If you have a
 
 Let's Connect! 🌐
 
-Have questions, feedback, or just want to chat about your favorite dishes? Reach out to us on [Twitter](https://twitter.com/RecipeRoulette) or join our community on [Discord](https://discord.gg/reciperoulette). We'd love to hear from you! 📣
+Have questions, feedback, or just want to chat about your favorite dishes? Reach out on [LinkedIn](https://www.linkedin.com/in/adela-simkova/) I'd love to hear from you! 📣
 
 Credits 🙌
 
