@@ -3,44 +3,28 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import {HeaderComponent} from "./header/header.component";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import {ShoppingListService} from "./shopping-list/shopping-list.service";
 import {AppRoutingModule} from "./app-routing.module";
-import {RecipeService} from "./recipes/recipe.service";
-import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
-import {AuthComponent} from "./auth/auth.component";
-import {AuthInterceptorService} from "./auth/auth-interceptor.service";
+import {HttpClientModule} from "@angular/common/http";
 import {RecipesModule} from "./recipes/recipes.module";
-import {AuthService} from "./auth/auth.service";
-import {AuthGuard} from "./auth/auth.guard";
 import {ShoppingListModule} from "./shopping-list/shopping-list.module";
 import {SharedModule} from "./shared/shared.module";
+import {CoreModule} from "./core.module";
+import {AuthModule} from "./auth/auth.module";
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    AuthComponent,
   ],
   imports: [
     BrowserModule,
-    FormsModule,
-    ReactiveFormsModule,
     AppRoutingModule,
     HttpClientModule,
     RecipesModule,
     ShoppingListModule,
-    SharedModule
-  ],
-  providers: [
-    ShoppingListService,
-    RecipeService,
-    AuthGuard,
-    AuthService,
-      {
-          provide: HTTP_INTERCEPTORS,
-          useClass: AuthInterceptorService,
-          multi: true
-      }
+    AuthModule,
+    SharedModule,
+    CoreModule
   ],
   bootstrap: [AppComponent]
 })
