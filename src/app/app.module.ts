@@ -16,6 +16,8 @@ import {AuthInterceptorService} from "./auth/auth-interceptor.service";
 import {AlertComponent} from "./shared/alert/alert.component";
 import {PlaceholderDirective} from "./shared/placeholder/placeholder.directive";
 import {RecipesModule} from "./recipes/recipes.module";
+import {AuthService} from "./auth/auth.service";
+import {AuthGuard} from "./auth/auth.guard";
 
 @NgModule({
   declarations: [
@@ -37,8 +39,11 @@ import {RecipesModule} from "./recipes/recipes.module";
     HttpClientModule,
     RecipesModule
   ],
-  providers: [ShoppingListService,
-      RecipeService,
+  providers: [
+    ShoppingListService,
+    RecipeService,
+    AuthGuard,
+    AuthService,
       {
           provide: HTTP_INTERCEPTORS,
           useClass: AuthInterceptorService,
