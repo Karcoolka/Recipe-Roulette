@@ -10,7 +10,7 @@ import {Subscription} from "rxjs";
 })
 export class ShoppingListComponent implements OnInit, OnDestroy{
   ingredients: Ingredient[];
-  private igChangeSub: Subscription; //renamed to: subscription in future
+  private igChangeSub: Subscription;
 
   constructor(private slService: ShoppingListService) {
 

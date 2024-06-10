@@ -1,5 +1,4 @@
 import {Ingredient} from "../shared/ingredient.modal";
-import {EventEmitter} from "@angular/core";
 import {Subject} from "rxjs";
 
 export class ShoppingListService {
