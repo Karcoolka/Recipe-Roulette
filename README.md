@@ -2,6 +2,8 @@
 
 Thanks for checking out my project, where cooking meets adventure! 🚀
 
+DEMO: https://euphonious-pegasus-ea7756.netlify.app/
+
 ### How to Get Started 🛠️
 
 1. Clone this repository to your local machine.
