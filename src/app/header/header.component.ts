@@ -6,11 +6,13 @@ import { AuthService } from '../auth/auth.service';
 
 @Component({
   selector: 'app-header',
-  templateUrl: './header.component.html'
+  templateUrl: './header.component.html',
+  styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit, OnDestroy {
   isAuthenticated = false;
   private userSub: Subscription;
+  isUserAdmin = false;
 
   constructor(
       private dataStorageService: DataStorageService,
@@ -19,12 +21,19 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.userSub = this.authService.user.subscribe(user => {
+      if(user.email === 'www@www.ww') {
+        this.isUserAdmin = true;
+      }
       this.isAuthenticated = !!user;
     });
   }
 
-  onSaveData() {
-    this.dataStorageService.storeRecipes();
+  onSaveData(event: Event): void {
+    if (!this.isUserAdmin) {
+      event.preventDefault();
+      return;
+    }
+      this.dataStorageService.storeRecipes();
   }
 
   onFetchData() {
